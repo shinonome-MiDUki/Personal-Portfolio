@@ -1,0 +1,9 @@
+[submodule "oxoria"]
+	path = oxoria
+	url = https://github.com/shinonome-MiDUki/oxoria.git
+[submodule "ShellArc"]
+	path = ShellArc
+	url = https://github.com/QU-miteiken-shelltech/Shell_Arc.git
+[submodule "Shell_DELTA"]
+	path = Shell_DELTA
+	url = https://github.com/QU-miteiken-shelltech/Shell_DELTA
