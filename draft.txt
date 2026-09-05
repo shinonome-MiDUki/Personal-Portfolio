@@ -4,6 +4,88 @@ PureRefなど、既存のリファリンスソフトへの不満足により開�
 pip install oxoria でクイックスタート
 担当箇所：基本全部（8月25日から外部プルリクエストを受け付けはじめ、後ほどOSSプロジェクトとして発表予定）
 
+構造：
+.
+├── API_reference.md
+├── LICENSE
+├── README.md
+├── changelog.txt
+├── dist
+│   ├── oxoria-2026.1.8-py3-none-any.whl
+│   └── oxoria-2026.1.8.tar.gz
+├── icon_gen.py
+├── pyproject.toml
+├── src
+│   └── oxoria
+│       ├── __init__.py
+│       ├── __main__.py
+│       ├── _resources
+│       │   ├── assets
+│       │   │   ├── icon.png
+│       │   │   └── initial_image.jpg
+│       │   ├── docs
+│       │   │   └── api_reference.html
+│       │   └── init_config
+│       │       ├── app_config.json
+│       │       ├── editor_config.json
+│       │       └── editor_config_ideal.json
+│       ├── cmd
+│       │   ├── __init__.py
+│       │   ├── app_api.py
+│       │   ├── canvas_api.py
+│       │   ├── config_api.py
+│       │   ├── cv_api.py
+│       │   ├── io_api.py
+│       │   ├── package_api.py
+│       │   ├── resources_api.py
+│       │   ├── search_api.py
+│       │   ├── std_cv_cmd.py
+│       │   └── std_menu_cmd.py
+│       ├── global_var.py
+│       ├── graphics
+│       │   ├── __init__.py
+│       │   └── img
+│       │       └── image_hash.py
+│       ├── io
+│       │   ├── __init__.py
+│       │   └── make_repo.py
+│       ├── search
+│       │   ├── __init__.py
+│       │   ├── db_operate.py
+│       │   ├── quantumize.py
+│       │   └── use_vector.py
+│       └── ui
+│           ├── __init__.py
+│           ├── canvas_area
+│           │   ├── canvas.py
+│           │   ├── ctx_menu.py
+│           │   ├── graphics_entity.py
+│           │   ├── graphics_item.py
+│           │   ├── memo_item.py
+│           │   └── resize_handle.py
+│           ├── initial
+│           │   └── initialise_ui.py
+│           ├── main_ui.py
+│           ├── outline
+│           │   └── menu_bar.py
+│           ├── resources_lib
+│           │   ├── registering_dialog.py
+│           │   └── side_panel.py
+│           ├── tasktray
+│           │   ├── __init__.py
+│           │   └── tasktray_ui.py
+│           ├── ui_var.py
+│           └── ux_widgets
+│               ├── console_line.py
+│               ├── console_output.py
+│               ├── settings_dialog.py
+│               └── splitter.py
+└── std_packages
+    └── collage
+        ├── __oxoplugin__.py
+        ├── collage_ui.py
+        └── grabcut_cv.py
+
 リファレンスライブラリ
 ユーザーはリファレンス画像にキャプションをつけて、自分のリファレンスライブラリに登録することができます
 ライブラリに登録されたリファレンスは将来も使うことができます
@@ -53,6 +135,121 @@ ShellArc は、単なるアセット管理アプリではなく、日本アニ�
 未定研という105人が所属している自主制作アニメーション企画の制作現場を現役で支えているフレームワークです。
 担当箇所：基盤コードの全部（PyCon JP 2026 を経て外部プルリクエストを受け付けはじめ、プルリクエストのレビューワーを担当しています）
 
+構造
+.
+├── Dockerfile.dc
+├── Dockerfile.itemi
+├── Dockerfile.nullai
+├── LICENSE
+├── README.md
+├── changelog.txt
+├── discord_bot
+│   ├── discord_connection.py
+│   ├── discord_notice_webhook.py
+│   └── emulator.py
+├── docker-compose.yml
+├── docker-compose.yml.template
+├── null_ai_chat
+│   ├── city_id.json
+│   └── discord_chatbot.py
+├── null_itemi_action
+│   └── itemi_action.py
+├── null_logo.png
+├── project_ctx
+│   ├── discord_config.json
+│   ├── linker_setting.yaml
+│   ├── project_setting.yaml
+│   ├── project_settings.json
+│   ├── requirements.txt
+│   └── spreadsheet_map.json
+├── project_ctx_main
+│   ├── discord_config.json
+│   ├── linker_setting.yaml
+│   ├── project_setting.yaml
+│   ├── project_settings.json
+│   └── spreadsheet_map.json
+├── project_ctx_template
+├── pyproject.toml
+├── requirements.txt
+├── ruff_log_report.txt
+├── shellarc_core_api_guide.md
+├── shellarc_devkit
+│   ├── cloud_access_check.py
+│   ├── key_encoder.py
+│   ├── local_dl
+│   │   ├── backup_on_local.py
+│   │   ├── init_settings.sh
+│   │   └── requirements.txt
+│   └── project_init_cli.py
+├── shellarc_native
+│   └── src
+│       └── assets
+├── src
+│   └── shellarc_core
+│       ├── __init__.py
+│       ├── auth
+│       │   ├── __init__.py
+│       │   ├── access_database.py
+│       │   ├── access_notion.py
+│       │   ├── access_r2.py
+│       │   └── access_spread_sheet.py
+│       ├── cfg
+│       │   ├── __init__.py
+│       │   ├── cfg_io.py
+│       │   └── spreadsheet_map_io.py
+│       ├── cloudio
+│       │   ├── __init__.py
+│       │   ├── io_git.py
+│       │   ├── io_notion.py
+│       │   ├── io_r2.py
+│       │   └── io_spreadsheet.py
+│       ├── exception
+│       │   ├── __init__.py
+│       │   ├── exceptions.py
+│       │   ├── structure_error.py
+│       │   └── user_exception.py
+│       ├── interface
+│       │   ├── __init__.py
+│       │   ├── interface_git.py
+│       │   ├── interface_notion.py
+│       │   ├── interface_r2.py
+│       │   └── interface_spreadsheet.py
+│       ├── process
+│       │   ├── __init__.py
+│       │   ├── query.py
+│       │   ├── register.py
+│       │   ├── requesting.py
+│       │   ├── reviewing.py
+│       │   ├── storyboard.py
+│       │   ├── uploader.py
+│       │   └── uploader_from_url.html.template
+│       ├── sapyc
+│       │   ├── __init__.py
+│       │   └── sapyc_interpreter.py
+│       ├── scheduler
+│       │   ├── main_timer.py
+│       │   └── manager.py
+│       └── utils
+│           ├── __init__.py
+│           ├── file_operation.py
+│           └── linker_parser.py
+└── tests
+    └── test_shellarc_core
+        ├── emulator
+        │   ├── emu_app.py
+        │   ├── emu_backend.py
+        │   ├── emulator_gb.py
+        │   ├── mock_cmd.py
+        │   └── run_emulator.py
+        ├── mockio
+        │   ├── mock_git_io.py
+        │   ├── mock_notion_io.py
+        │   ├── mock_r2_io.py
+        │   └── mock_spreadsheet_io.py
+        └── utils
+            ├── emu_state.py
+            └── mock_media.py
+
 未定研では、去年までDropboxやメガファイル便のリンクの送り合いでデータを管理していましたが、部員数の大幅な増加により、手動管理の破綻が露呈し、データ構造がカオス化し、データフローも破綻しはじめました。
 そこでパイプラインの整備とライプラインツールの開発を提案し、ShellArc の発端となり、同時に部内技術機関である ShellTech も設置しました。
 ShellArc の中核である shellarc_core モジュールを中心に、Discord ボットとデスクトップアプリケーションをフロントエンドとして展開しています
@@ -82,7 +279,6 @@ ShellArc が今の形になるまで、アーティストの使用体験とシ�
 また、「カットごとに異なるアセット数」、「急遽新しいカットを入れることによるカット番号のずらし」、「他カットの素材の流用」なども標準機能で簡単に可能になっています
 2. バックエンド独立のライブラリ形式がもたらすフロントエンドの自由度：バックエンドとフロントエンドが分離されているため、実際の需要に応じて、新しいツールを素早く開発することができます
 例えば未定研では、「ローカルで提出された素材を一括ダウンロードしたい」という監督と撮影・編集担当からの要望があり、通常の Discord ボットと全く同じ shellarc_core バックエンドを持つ ShellArc Desktop を開発しました
-3. 可視化
 
 クリエーターファーストのアプローチ
 制作管理のツールは、制作の中心であるクリエーターに安心して使ってもらえないと意味ありませんので、クリエーターの使用体験を最優先にしたアプローチを取っています
@@ -106,11 +302,100 @@ Shell DELTA
 既存の After Effects などでは実現しにくい、あるいは手間がかかる柔軟なコマ打ちと複雑なタイムリマッピングに特化した、ShellTech 内製のセルアニメーションタイムライン編集ソフトです
 PySide6（GUIフレームワーク）とOpenGLをベースとしたソフトです。
 
+構造：.
+├── LICENSE
+├── README.md
+├── manual.md
+├── nudec
+│   ├── CMakeLists.txt
+│   ├── cmake_config.sh
+│   ├── entry.cpp
+│   ├── nudec_decode.cpp
+│   ├── nudec_decode.h
+│   ├── nudec_pack.cpp
+│   ├── nudec_pack.h
+│   └── pyproject.toml
+├── pyproject.toml
+├── sample_proj.sdproj
+└── src
+    └── shell_delta
+        ├── __main__.py
+        ├── _resources
+        │   ├── expression_presets.json
+        │   ├── fallback.png
+        │   └── icon.jpg
+        ├── expression
+        │   ├── cel_engine.py
+        │   └── tcl_engine.py
+        ├── gb_var.py
+        ├── graphics
+        │   └── player.py
+        ├── io
+        │   └── io_sdproj.py
+        ├── render
+        │   ├── render.py
+        │   ├── render_formats.py
+        │   └── time_map.py
+        ├── style
+        │   ├── dark_default.py
+        │   ├── elegant_light.py
+        │   ├── kawaii_pink.py
+        │   └── pure_skyblue.py
+        ├── ui
+        │   ├── expression_editor.py
+        │   ├── expression_widgets.py
+        │   ├── main_win
+        │   │   ├── main_win.py
+        │   │   ├── main_win_events.py
+        │   │   ├── main_win_io.py
+        │   │   ├── main_win_playback.py
+        │   │   └── main_win_ui.py
+        │   ├── opengl.py
+        │   └── render_dialog.py
+        └── utils
+            └── editing_utils.py
+
 クリーンコードへの配慮
+コードと関数責務の分離を徹底し、どの機能のコードをどこで参照できるかがすぐわかるようなコード構成に心がけています
+各関数の入力、出力と処理や副作用を明確にし、アプリケーションを拡張する際、新しいロジックをスムーズに既存のロジックに挟めるようにしています。
+また、巨大化したUIコードは mixim の手法を使って分割し、より保守しやすいコードにリファクタリングしました
+
 GPUを駆使した描画
-強力なエクスプレッションシステム
-外部統合
+大量な連番画像を安定して30fpsでリアルタイムで再生するために、標準の QImage ではなく、OpenGL を用いてより低レベルから再生システムを実装しました
+当初はリアルタイムで OpenGL テクスチャを生成し描画していたが、通常の編集作業中では動作するものの、CPUからGPUへのデータ転送コストとOpenGLコンテクストスイッチコストがかかり、リアルタイム再生ではコマ落ちが発生しました
+そのため、すべての連番画像をあらかじめテクスチャ化しVRAMに転送し、再生時はVRAMでのテクスチャへのポインタの配列をスイッチすることで最適化を図りました
+しかし、連番画像の合計サイズが巨大になってしまうと、VRAMが圧迫してしまうため、編集時はリアルタイムテクスチャ生成で、再生時は事前生成とキャッシュという二アプローチを併用しており、再生後のキャッシュクリアとメモリ解放にも心がけています
+また、連番画像を内部でインデックスで管理しているため、使い回しの場合でもメモリ消費は1枚分です
+テクスチャがキャッシュされている間、新規テクスチャを生成するとコンテキストスイッチによりキャッシュされたテクスチャがC++側で破棄され、アプリ側でそのポイントを参照しようとするとOSのセグメンテーションフォルトを引き起こしてしまうました
+それに対応すべく、メモリにテクスチャポインタがキャッシュ保持されている間はテクスチャ生成ではなくポインタのスイッチを強制し、コンテキストスイッチを禁止するロジックを実装しました
+
+エクスプレッションシステム
+タイムリマッピングは、規則的な操作が多いため、TCL と CEL の二つの言語によるエクスプレッションシステムを提供しています
+TCL はより複雑な関数を記述することができ、CEL は気軽に書ける一行エクスプレッションに特化しています
+また記述したTCL関数をプロジェクトファイルに埋め込み、他の作業者に配布することもできます
+エクスプレッションが書けないクリエーターもスムーズに利用できるように、ループや三コマ打ちなどの常用なパターンをプリセットとして標準搭載しています
+
 今後について
+まだ開発早期のため、不完備なところが多く、今後も改善していきたいところが多く残っています
+1. 外部統合：nostal.net という画像処理ウェブアプリの作者からコード利用の許諾を得て、そのカラーグレーディンとエフェクトのシェーダーコードをプラグインとしてShell DELTAに搭載し、総合撮影ソフトウェアに仕上げる予定です
+2. スクリプティング機能：ロジックとUIの分離を見直し、Pythonなどのスクリプト言語でカスタム化できるようにしたい
+3. レイヤー・タイムシート対応：マルチレイヤー描画とCSV形式のタイムシートに対応する予定です
+4. ストリーミングロード実装：連番画像が膨大になると、物量的にVRAMが限界を迎え、オーバーフローしてしまいますので、連番画像をチャンクに分けて、バックグラウンドストリーミングロードで解決していきたい
 
 
 NUDEC
+Shell DELTA の高速描画エンジンとして開発したもので、のちコンテナ規格プロジェクトとして独立したものです
+KTX2 テクスチャ圧縮規格を用いた ShellTech 製の GPU ネイティブメディアコーデックとコンテナであり、
+今まで使用してきた VDMX の代わりに、未定研の次世代劇場上映システムコアと予定されているものです
+なお仕様とパイプライン設計は自分で行なったものの、エンコーダの初期実装とCMake コンフィグは生成AIを活用しています
+
+コンセプト
+CPU負担をなるべく減らし、GPUをフル活用した映像再生規格をコンセプトとしています
+技術的にはテクスチャを KTX2 に準拠し圧縮することで、クオリティを維持しつつ VRAM 使用量を抑えています
+またオーバーフローを避けるためにチャンクごとのストリーミングローディングを採用しており、各チャンクは texture array として管理されるため切り替えが極めて高速である
+
+パイプライン
+エンコード：PNG連番画像 -> KTX2で圧縮 -> N枚ごとに一個のチャンクにする -> 全てを.nuanimバイナルファイルに書き込む 
+デコード（再生）：プレーヤーから再生 -> Python から OpenGL コンテキストを宣言 -> C++ にコンテキストバンドルを渡す -> C++でコンテキストを設定 ->  VBOを定義 -> C++で .nuanim バイナリヘッダーを読み込む -> チャンク0と1を OpenGL 3D Texture に変換 -> std::array<GLuint, 2> に書き込み PyBind11 経由で Python に渡す -> Python がテクスチャを参照 -> VBO経由でレイヤーを切り替える -> チャンク0の再生が終わった時点で C++ に更新命令 -> C++が2チャンク目を処理し、[1チャンク目, 2チャンク目]のstd::array<GLuint, 2>を返す -> 以上を繰り返す 
+終了処理：上映終わり -> Textureを破棄 -> VRAM 解放 -> ガーベジコレクション
+現在はエンコーダとデコーダを実装しており、これからは PyBind の実装に進みます
