@@ -11,8 +11,8 @@
 
 # Oxoria
 
-リポジトリ：[Oxoria](./oxoria)
-ドキュメント：[Oxoria Docs](./oxoria/README.md)
+リポジトリ：[Oxoria](https://github.com/shinonome-MiDUki/oxoria)
+ドキュメント：[Oxoria Docs](https://github.com/shinonome-MiDUki/oxoria/blob/main/README.md)
 
 PureRef など、既存のリファレンスソフトへの不満足により開発したソフトウェアです。
 
@@ -114,8 +114,8 @@ Oxoria のソースコードを一行も変更せずに、さまざまな拡張�
 
 # ShellArc
 
-リポジトリ：[ShellArc](./ShellArc)
-ドキュメント：[ShellArc Docs](./ShellArc/README_jpn.md)
+リポジトリ：[ShellArc](https://github.com/QU-miteiken-shelltech/Shell_Arc)
+ドキュメント：[ShellArc Docs](https://github.com/QU-miteiken-shelltech/Shell_Arc/blob/main/README_jpn.md)
 
 ShellArc は、単なるアセット管理アプリではなく、**日本アニメ制作のレイアウト、原画から撮影、編集までの全工程を管理するバックエンドフレームワークライブラリです。**
 
@@ -194,8 +194,8 @@ ShellArc は未定研発のオープンソースフレームワークですの�
 
 # Shell DELTA
 
-リポジトリ：[Shell DELTA](./Shell_DELTA)
-ドキュメント：[Shell DELTA Docs](./Shell_DELTA/manual.md)
+リポジトリ：[Shell DELTA](https://github.com/QU-miteiken-shelltech/Shell_DELTA)
+ドキュメント：[Shell DELTA Docs](https://github.com/QU-miteiken-shelltech/Shell_DELTA/blob/main/manual.md)
 
 既存の After Effects などでは実現しにくい、あるいは手間がかかる**柔軟なコマ打ちと複雑なタイムリマッピングに特化した**、ShellTech 内製のセルアニメーションタイムライン編集ソフトです。
 
@@ -263,7 +263,7 @@ TCL はより複雑な関数を記述することができ、CEL は気軽に書
 
 # NUDEC
 
-リポジトリ：[NUDEC](./Shell_DELTA/nudec/)
+リポジトリ：[NUDEC](https://github.com/QU-miteiken-shelltech/Shell_NUDEC/tree/e38de47e78007f45597737ee6308010ef4343e4f)
 
 Shell DELTA の高速描画エンジンとして開発したもので、のちコンテナ規格プロジェクトとして独立したものです。
 
